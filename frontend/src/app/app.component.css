@@ -1,0 +1,118 @@
+/* General styles */
+body {
+    background: radial-gradient(circle, #e91e63, #9c27b0); /* Mixed Pink to Purple */
+    font-family: Arial, sans-serif;
+}
+
+/* User List Section */
+.user-list {
+    margin-bottom: 20px;
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) translateZ(0);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-item:hover {
+    transform: perspective(1000px) translateZ(20px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.user-info {
+    font-weight: bold;
+    color: #1b5e20; /* Dark green */
+}
+
+.user-actions button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button Styles */
+.edit-button {
+    background: #ffeb3b; /* Yellow */
+    color: #000;
+}
+
+.edit-button:hover {
+    background: #fbc02d; /* Darker yellow */
+    transform: translateY(-2px);
+}
+
+.delete-button {
+    background: #f44336; /* Red */
+    color: #fff;
+}
+
+.delete-button:hover {
+    background: #d32f2f; /* Darker red */
+    transform: translateY(-2px);
+}
+
+/* User Form Section */
+.user-form {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) translateZ(0);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #1976d2; /* Blue */
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 2px solid #1976d2; /* Blue */
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #0d47a1; /* Dark blue */
+    outline: none;
+}
+
+/* Submit Button */
+.submit-button {
+    padding: 12px 20px;
+    background-color: #4caf50; /* Green */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #388e3c; /* Darker green */
+    transform: translateY(-2px);
+}
+
+/* Error Message */
+.error-message {
+    color: #d32f2f; /* Red */
+    margin-top: 10px;
+}

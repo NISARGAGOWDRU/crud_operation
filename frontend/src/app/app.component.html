@@ -1,0 +1,32 @@
+<!-- User List Section -->
+<div class="user-list">
+  <h2>User List</h2>
+  <ul>
+    <li *ngFor="let user of users" class="user-item">
+      <span class="user-info">{{ user.name }} ({{ user.email }})</span>
+      <div class="user-actions">
+        <button (click)="editUser(user)" class="edit-button">Edit</button>
+        <button (click)="deleteUser(user.id)" class="delete-button">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<!-- User Form Section -->
+<div class="user-form">
+  <h2>{{ editing ? 'Edit User' : 'Add User' }}</h2>
+  <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="formData.name" name="name" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="formData.email" name="email" required />
+    </div>
+    <button type="submit" [disabled]="!userForm.valid" class="submit-button">
+      {{ editing ? 'Update' : 'Add' }} User
+    </button>
+  </form>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</div>
